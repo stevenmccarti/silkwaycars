@@ -1,0 +1,15 @@
+# GitHub Pages Jekyll Configuration
+# This file enables clean URLs (without .html) on GitHub Pages
+
+# Enable Jekyll (GitHub Pages uses Jekyll by default)
+# Permalinks are set in each HTML file's front matter
+
+# Exclude files from processing
+exclude:
+  - node_modules
+  - .git
+  - .gitignore
+  - README.md
+  - README-GITLAB.md
+  - SILKWAY1
+

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - SILKWAY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://silkwaycars.ru/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://silkwaycars.ru/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://silkwaycars.ru/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="reviews-page">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><img src="images/silkway-text.png" alt="SILKWAY" class="logo-image"></a>
+                </div>
+                <nav class="nav">
+                    <a href="about.html">О нас</a>
+                    <a href="contacts.html">Условия</a>
+                    <a href="reviews.html">Отзывы</a>
+                </nav>
+                <div class="social-icons">
+                    <a href="https://t.me/+79957809122" target="_blank"><img src="images/telegram-logo.png" alt="Telegram"></a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B79957809122&text&type=phone_number&app_absent=0" target="_blank"><img src="images/whatsapp-logo.png" alt="WhatsApp"></a>
+                    <a href="https://www.instagram.com/sw_cars_charge_chalet/" target="_blank" class="instagram-container"><img src="images/instagram-logo.png" alt="Instagram"><img src="images/asterisk.png" alt="*" class="asterisk"></a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="mobile-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <a href="index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Условия</a>
+                <a href="reviews.html">Отзывы</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="reviews-section">
+            <div class="container">
+                <div class="reviews-buttons">
+                    <a href="https://yandex.ru/maps/org/silkvey/199650482719/?ll=85.863641%2C51.889253&z=11" target="_blank" class="review-button">
+                        <div class="review-button-content">
+                            <img src="images/yandex-logo.png" alt="Яндекс" class="review-button-icon">
+                            <span class="review-button-text">Яндекс</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://go.2gis.com/C7zv5" target="_blank" class="review-button">
+                        <div class="review-button-content">
+                            <img src="images/2gis-logo.svg" alt="2ГИС" class="review-button-icon">
+                            <span class="review-button-text">2ГИС</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Photo Gallery -->
+                <div class="photo-gallery">
+                    <div class="gallery-container">
+                        <button class="gallery-nav-btn prev-btn" id="prevBtn">‹</button>
+                        <div class="gallery-slider">
+                            <img src="images/1.jpg" alt="Автомобиль 1" class="gallery-image active" id="currentImage">
+                        </div>
+                        <button class="gallery-nav-btn next-btn" id="nextBtn">›</button>
+                    </div>
+                    <div class="gallery-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                        <span class="dot" data-slide="4"></span>
+                        <span class="dot" data-slide="5"></span>
+                        <span class="dot" data-slide="6"></span>
+                        <span class="dot" data-slide="7"></span>
+                    </div>
+                </div>
+                
+                <!-- Fullscreen Image Viewer (for small screens only) -->
+                <div class="fullscreen-overlay" id="fullscreenOverlay">
+                    <button class="fullscreen-close" id="fullscreenClose">&times;</button>
+                    <div class="fullscreen-content">
+                        <img class="fullscreen-image" id="fullscreenImage" alt="Fullscreen view">
+                        <div class="fullscreen-nav-buttons">
+                            <button class="fullscreen-nav-btn fullscreen-prev" id="fullscreenPrev">‹</button>
+                            <button class="fullscreen-nav-btn fullscreen-next" id="fullscreenNext">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="instagram-disclaimer">* - Instagram (принадлежит компании Meta, признанной экстремистской и запрещенной на территории РФ)</p>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+        if (mobileMenuBtn && mobileMenu && mobileMenuClose) {
+            console.log('Mobile menu elements found');
+            mobileMenuBtn.addEventListener('click', function() {
+                console.log('Mobile menu button clicked');
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            mobileMenuClose.addEventListener('click', function() {
+                console.log('Mobile menu close clicked');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Close menu when clicking on links
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-content a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    console.log('Mobile menu link clicked:', this.href);
+                    // Don't prevent default - let the link work normally
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        } else {
+            console.log('Mobile menu elements not found:', {
+                mobileMenuBtn: !!mobileMenuBtn,
+                mobileMenu: !!mobileMenu,
+                mobileMenuClose: !!mobileMenuClose
+            });
+        }
+
+        // Photo gallery functionality
+        let currentSlide = 0;
+        const totalSlides = 8;
+        const currentImage = document.getElementById('currentImage');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+
+        // Array of image files (excluding 4.jpg)
+        const imageFiles = ['1.jpg', '2.jpg', '3.jpg', '5.jpg', '6.JPG', '7.JPG', '8.JPG', '9.JPG'];
+
+        function showSlide(slideIndex) {
+            currentSlide = slideIndex;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            
+            currentImage.src = `images/${imageFiles[currentSlide]}`;
+            currentImage.alt = `Автомобиль ${currentSlide + 1}`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Event listeners
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+        }
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        // Fullscreen image viewer for small screens
+        const fullscreenOverlay = document.getElementById('fullscreenOverlay');
+        const fullscreenImage = document.getElementById('fullscreenImage');
+        const fullscreenClose = document.getElementById('fullscreenClose');
+        const fullscreenPrev = document.getElementById('fullscreenPrev');
+        const fullscreenNext = document.getElementById('fullscreenNext');
+
+        function openFullscreen() {
+            // Only work on small screens
+            if (window.innerWidth <= 768) {
+                fullscreenImage.src = currentImage.src;
+                fullscreenImage.alt = currentImage.alt;
+                fullscreenOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeFullscreen() {
+            fullscreenOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Click on current image to open fullscreen
+        if (currentImage) {
+            currentImage.addEventListener('click', openFullscreen);
+        }
+
+        // Update fullscreen image when navigating between slides
+        function updateFullscreenImage() {
+            if (fullscreenOverlay.classList.contains('active')) {
+                fullscreenImage.src = currentImage.src;
+                fullscreenImage.alt = currentImage.alt;
+            }
+        }
+
+        // Override the showSlide function to update fullscreen image
+        const originalShowSlide = showSlide;
+        showSlide = function(slideIndex) {
+            originalShowSlide(slideIndex);
+            updateFullscreenImage();
+        };
+
+        // Close fullscreen when clicking close button or overlay
+        if (fullscreenClose) {
+            fullscreenClose.addEventListener('click', closeFullscreen);
+        }
+
+        if (fullscreenOverlay) {
+            fullscreenOverlay.addEventListener('click', function(e) {
+                if (e.target === fullscreenOverlay) {
+                    closeFullscreen();
+                }
+            });
+        }
+
+        // Fullscreen navigation functions
+        function fullscreenNextSlide() {
+            if (fullscreenOverlay.classList.contains('active')) {
+                showSlide(currentSlide + 1);
+                fullscreenImage.src = currentImage.src;
+                fullscreenImage.alt = currentImage.alt;
+            }
+        }
+
+        function fullscreenPrevSlide() {
+            if (fullscreenOverlay.classList.contains('active')) {
+                showSlide(currentSlide - 1);
+                fullscreenImage.src = currentImage.src;
+                fullscreenImage.alt = currentImage.alt;
+            }
+        }
+
+        // Add event listeners for fullscreen navigation
+        if (fullscreenNext) {
+            fullscreenNext.addEventListener('click', fullscreenNextSlide);
+        }
+
+        if (fullscreenPrev) {
+            fullscreenPrev.addEventListener('click', fullscreenPrevSlide);
+        }
+
+        // Close fullscreen with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && fullscreenOverlay.classList.contains('active')) {
+                closeFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>

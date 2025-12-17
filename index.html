@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILKWAY - Прокат автомобилей на Алтае</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://silkwaycars.ru/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://silkwaycars.ru/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://silkwaycars.ru/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/silkway-text.png" alt="SILKWAY" class="logo-image">
+                </div>
+                <nav class="nav">
+                    <a href="/about">О нас</a>
+                    <a href="/terms">Условия</a>
+                    <a href="/reviews">Отзывы</a>
+                </nav>
+                <div class="social-icons">
+                    <a href="https://t.me/+79957809122" target="_blank"><img src="images/telegram-logo.png" alt="Telegram"></a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B79957809122&text&type=phone_number&app_absent=0" target="_blank"><img src="images/whatsapp-logo.png" alt="WhatsApp"></a>
+                    <a href="https://www.instagram.com/sw_cars_charge_chalet/" target="_blank" class="instagram-container"><img src="images/instagram-logo.png" alt="Instagram"><img src="images/asterisk.png" alt="*" class="asterisk"></a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="mobile-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <a href="/">Главная</a>
+                <a href="/about">О нас</a>
+                <a href="/terms">Условия</a>
+                <a href="/reviews">Отзывы</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="mountain-image">
+                <img src="images/mountain.PNG" alt="Горы Алтая">
+            </div>
+            <div class="hero-text">
+                <h1>Прокат на Алтае</h1>
+                <h2>электромобилей и автомобилей</h2>
+                <p class="hero-subtitle">В нашем автопарке собраны исключительно немецкие и американские автомобили!</p>
+            </div>
+            <div class="car-image">
+                <img src="images/id4-car.png" alt="Электромобиль">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section class="cars-section">
+        <h2 class="section-title">Наши машины:</h2>
+        <div class="cars-grid">
+            <div class="car-card">
+                <img src="images/car-card-1.png" alt="Volkswagen ID 4 CROZZ">
+            </div>
+            <div class="car-card">
+                <img src="images/car-card-2.webp" alt="Volkswagen Tiguan">
+            </div>
+            <div class="car-card">
+                <img src="images/car-card-3.webp" alt="Volkswagen Polo">
+            </div>
+            <div class="car-card">
+                <img src="images/car-card-4.png" alt="Fourth Car">
+            </div>
+        </div>
+    </section>
+
+    <!-- Green Trend Section -->
+    <section class="green-trend">
+        <div class="green-trend-content">
+            <div class="green-trend-left">
+                <h2>Присоединяйся к зеленому тренду одним из первых</h2>
+                <p>Бронируй электромобиль и отправляйся в незабываемое путешествие по Алтаю!</p>
+                <a href="#booking-form" class="btn-book">Забронировать</a>
+                <div class="landscape-images">
+                    <img src="images/landscape-1.png" alt="Пейзаж Алтая 1">
+                    <img src="images/landscape-2.png" alt="Пейзаж Алтая 2">
+                </div>
+            </div>
+            <div class="green-trend-right">
+                <h3>Преимущества компании</h3>
+                
+                <div class="advantage-box">
+                    <p>Наша команда занимается развитием зарядной инфраструктуры для электротранспорта в различных регионах, а также сдачей в аренду электромобилей.</p>
+                </div>
+                
+                <div class="advantage-box">
+                    <p>Наш проект уже получил поддержку Правительства Республики Алтай в виде статуса регионального значения.</p>
+                </div>
+                
+                <!-- Mobile Circle Button (only visible on small screens) -->
+                <div class="mobile-circle-btn" onclick="scrollToBooking()">
+                    <span>Забронировать</span>
+                </div>
+                
+                <h3>Мы задаем тренды развития зарядной инфраструктуры для электромобилей и вот почему:</h3>
+                <div class="benefit-item">
+                    <img src="images/checkmark.png" alt="Галочка" class="checkmark">
+                    <div>
+                        <h4>Экологичность:</h4>
+                        <p>электромобили не производят вредных выбросов в атмосферу, что снижает загрязнение окружающей среды и улучшает качество воздуха.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <img src="images/checkmark.png" alt="Галочка" class="checkmark">
+                    <div>
+                        <h4>Экономичность:</h4>
+                        <p>эксплуатация электромобилей обходится дешевле, чем автомобилей с двигателем внутреннего сгорания, благодаря более низким затратам на топливо и обслуживание.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <img src="images/checkmark.png" alt="Галочка" class="checkmark">
+                    <div>
+                        <h4>Удобство:</h4>
+                        <p>электромобили обладают высокой маневренностью и низким уровнем шума, что делает их более комфортными для использования в городских условиях.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking-section" class="booking-form">
+        <h2>Забронировать</h2>
+        <p>С вами свяжутся в течение дня</p>
+        <form id="booking-form">
+            <input type="text" placeholder="Имя" required>
+            <input type="text" placeholder="Телефон / Telegram username" required>
+            
+            <div class="consent-section">
+                <label class="consent-checkbox">
+                    <input type="checkbox" required>
+                    <span class="checkbox-custom"></span>
+                    <span class="consent-text">Я согласен на <a href="/consent" class="green-link">обработку персональных данных</a></span>
+                </label>
+                <div class="checkbox-error" style="display: none;">Необходимо согласиться с обработкой персональных данных</div>
+                <div class="privacy-row">
+                    <span class="checkbox-spacer"></span>
+                    <span class="privacy-text">Нажимая кнопку "Забронировать" вы соглашаетесь с <a href="/privacy" class="green-link">Политикой конфиденциальности</a>.</span>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-submit">Забронировать</button>
+            
+            <!-- Privacy text for small screens only -->
+            <div class="privacy-row-small">
+                <span class="privacy-text-small">Нажимая кнопку "Забронировать" вы соглашаетесь с <a href="/privacy" class="green-link">Политикой конфиденциальности</a>.</span>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+        
+        mobileMenuClose.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            }
+        });
+        
+        // Function to scroll to booking form
+        function scrollToBooking() {
+            const bookingForm = document.getElementById('booking-form');
+            if (bookingForm) {
+                bookingForm.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Form validation
+        const form = document.querySelector('#booking-form');
+        const checkbox = document.querySelector('input[type="checkbox"]');
+        const errorMessage = document.querySelector('.checkbox-error');
+        const checkboxLabel = document.querySelector('.consent-checkbox');
+        const submitButton = document.querySelector('.btn-submit');
+        
+        console.log('Form found:', form);
+        console.log('Checkbox found:', checkbox);
+        console.log('Error message found:', errorMessage);
+        console.log('Checkbox label found:', checkboxLabel);
+        console.log('Submit button found:', submitButton);
+        
+        if (form && checkbox && errorMessage && checkboxLabel && submitButton) {
+            // Add validation to button click
+            submitButton.addEventListener('click', function(e) {
+                console.log('Button clicked, checkbox checked:', checkbox.checked);
+                if (!checkbox.checked) {
+                    e.preventDefault();
+                    console.log('Preventing submission, adding error class');
+                    checkbox.classList.add('error');
+                    checkboxLabel.classList.add('error');
+                    errorMessage.classList.add('show');
+                    return false;
+                } else {
+                    console.log('Checkbox checked, removing error class');
+                    checkbox.classList.remove('error');
+                    checkboxLabel.classList.remove('error');
+                    errorMessage.classList.remove('show');
+                }
+            });
+            
+            // Booking form submission to Telegram
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Always prevent default form submission
+                
+                console.log('Form submitted, checkbox checked:', checkbox.checked);
+                
+                // Validate checkbox
+                if (!checkbox.checked) {
+                    console.log('Preventing submission, adding error class');
+                    checkbox.classList.add('error');
+                    checkboxLabel.classList.add('error');
+                    errorMessage.classList.add('show');
+                    return false;
+                }
+                
+                // Remove error classes
+                checkbox.classList.remove('error');
+                checkboxLabel.classList.remove('error');
+                errorMessage.classList.remove('show');
+                
+                // Get form values
+                const nameInput = form.querySelector('input[placeholder="Имя"]');
+                const contactInput = form.querySelector('input[placeholder="Телефон / Telegram username"]');
+                
+                const name = nameInput.value.trim();
+                const contact = contactInput.value.trim();
+                
+                if (!name || !contact) {
+                    alert('Пожалуйста, заполните все поля');
+                    return;
+                }
+                
+                // Show loading state
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Отправляем...';
+                submitButton.disabled = true;
+                
+                // Send to Telegram
+                sendToTelegram(name, contact, submitButton, originalText);
+            });
+            
+            // Function to send data to Telegram
+            async function sendToTelegram(name, contact, submitBtn, originalText) {
+                const botToken = '8496321096:AAGP5zyLSzYpAEOmidp5QPxGJXcJBtxuP5Y';
+                const personalChatId = '5437930232'; // Your personal chat
+                const groupChatId = '-1001831457423'; // Your Telegram group
+                
+                const message = `🚗 НОВАЯ ЗАЯВКА НА БРОНИРОВАНИЕ!
+
+👤 Имя: ${name}
+📱 Контакт: ${contact}
+🌐 Источник: Сайт SILKWAY
+⏰ Время: ${new Date().toLocaleString('ru-RU')}`;
+                
+                try {
+                    // Send to both personal chat and group
+                    const promises = [
+                        // Send to personal chat
+                        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                chat_id: personalChatId,
+                                text: message,
+                                parse_mode: 'HTML'
+                            })
+                        }),
+                        // Send to group
+                        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                chat_id: groupChatId,
+                                text: message,
+                                parse_mode: 'HTML'
+                            })
+                        })
+                    ];
+                    
+                    // Wait for both messages to be sent
+                    const responses = await Promise.all(promises);
+                    const results = await Promise.all(responses.map(r => r.json()));
+                    
+                    // Check if both messages were sent successfully
+                    const allSuccessful = results.every(result => result.ok);
+                    
+                    if (allSuccessful) {
+                        // Success - both messages sent
+                        alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в течение дня!');
+                        
+                        // Reset form
+                        form.reset();
+                        
+                    } else {
+                        // Some messages failed
+                        console.error('Telegram API errors:', results);
+                        alert('Заявка отправлена, но произошла ошибка при уведомлении команды. Мы свяжемся с вами в течение дня!');
+                        
+                        // Still reset form since at least one message was sent
+                        form.reset();
+                    }
+                    
+                } catch (error) {
+                    console.error('Error sending to Telegram:', error);
+                    alert('Произошла ошибка при отправке. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.');
+                } finally {
+                    // Reset button - ensure this always happens
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            }
+            
+            // Remove error when checkbox is checked
+            checkbox.addEventListener('change', function() {
+                console.log('Checkbox changed, checked:', this.checked);
+                if (this.checked) {
+                    this.classList.remove('error');
+                    checkboxLabel.classList.remove('error');
+                    errorMessage.classList.remove('show');
+                }
+            });
+        } else {
+            console.error('Could not find form elements for validation');
+        }
+        
+        // Scroll animations for different screen sizes
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const mountain = document.querySelector('.mountain-image');
+            const car = document.querySelector('.car-image');
+            const modal = document.querySelector('.green-trend-left');
+            const mobileCircleBtn = document.querySelector('.mobile-circle-btn');
+            
+            // Get hero section height to calculate safe zone
+            const heroSection = document.querySelector('.hero');
+            const heroHeight = heroSection.offsetHeight;
+            const maxSafeMove = heroHeight * 0.4; // Stay within 40% of hero height
+            
+            // Check screen size for different animations
+            const isSmallScreen = window.innerWidth <= 768;
+            const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1024;
+            const isLargeScreen = window.innerWidth >= 1600;
+            
+            if (isSmallScreen) {
+                // Small screen animations - car goes around mountain, circle button scrolls
+                if (car && mountain) {
+                    // Car goes down and around the mountain - much reduced movement
+                    const carMove = Math.min(scrolled * 0.1, 40); // Reduced from 0.2 to 0.1, max from 80 to 40
+                    const carRotate = Math.min(scrolled * 0.03, 5); // Reduced from 0.05 to 0.03, max from 8 to 5
+                    car.style.transform = `translateY(${carMove}px) rotate(${carRotate}deg)`;
+                    
+                    // Mountain stays in place with our CSS positioning
+                    mountain.style.transform = 'translateY(-20px)';
+                }
+                
+                // Circle button scroll animation - completely smooth without twitching or jumping
+                if (mobileCircleBtn) {
+                    // Check if button is fully visible on screen to start animation
+                    const buttonRect = mobileCircleBtn.getBoundingClientRect();
+                    const isButtonFullyVisible = buttonRect.top >= 0 && buttonRect.bottom <= window.innerHeight;
+                    const isButtonCompletelyOffScreen = buttonRect.bottom < 0 || buttonRect.top > window.innerHeight;
+                    
+                    if (isButtonFullyVisible) {
+                        // Calculate relative scroll position from when button first becomes fully visible
+                        if (!mobileCircleBtn.dataset.startScroll) {
+                            mobileCircleBtn.dataset.startScroll = scrolled;
+                        }
+                        
+                        const startScroll = parseFloat(mobileCircleBtn.dataset.startScroll);
+                        const relativeScroll = scrolled - startScroll;
+                        
+                        // Limited movement to keep button visible on screen - increased range for more movement
+                        const maxMovement = 350; // Increased from 250 to 350 for much more movement while staying visible
+                        const btnMove = Math.round(Math.max(0, Math.min(relativeScroll * 1.0, maxMovement))); // Returned to 1.0 sensitivity to prevent going beyond screen
+                        
+                        // Use requestAnimationFrame for smooth updates and prevent twitching
+                        if (!mobileCircleBtn.dataset.animationFrame) {
+                            mobileCircleBtn.dataset.animationFrame = requestAnimationFrame(() => {
+                                mobileCircleBtn.style.transform = `translateY(${btnMove}px)`;
+                                delete mobileCircleBtn.dataset.animationFrame;
+                            });
+                        }
+                    } else if (isButtonCompletelyOffScreen) {
+                        // Only reset when button is completely off-screen
+                        mobileCircleBtn.style.transform = 'none';
+                        delete mobileCircleBtn.dataset.startScroll;
+                        delete mobileCircleBtn.dataset.animationFrame;
+                    }
+                    // If button is partially visible but not fully visible, keep current state (don't reset)
+                }
+                
+                // No modal animation on small screens
+                if (modal) {
+                    modal.style.transform = 'none';
+                }
+            } else {
+                // Medium and large screen animations (existing logic)
+                if (mountain && car) {
+                    const mountainMove = Math.min(scrolled * 0.3, maxSafeMove);
+                    const carMovementMultiplier = isLargeScreen ? 0.25 : 0.4;
+                    const carMove = Math.min(scrolled * carMovementMultiplier, maxSafeMove);
+                    
+                    mountain.style.transform = `translateY(${mountainMove}px)`;
+                    car.style.transform = `translateY(${carMove}px)`;
+                }
+                
+                // Modal scroll animation - only when whole modal is visible
+                if (modal) {
+                    if (!modal.dataset.originalTop) {
+                        const modalRect = modal.getBoundingClientRect();
+                        modal.dataset.originalTop = modalRect.top + scrolled;
+                        modal.dataset.originalHeight = modalRect.height;
+                    }
+                    
+                    const originalTop = parseFloat(modal.dataset.originalTop);
+                    const modalHeight = parseFloat(modal.dataset.originalHeight);
+                    const windowHeight = window.innerHeight;
+                    
+                    const currentModalTop = originalTop - scrolled;
+                    const currentModalBottom = currentModalTop + modalHeight;
+                    
+                    const isModalFullyVisible = currentModalTop >= 0 && currentModalBottom <= windowHeight;
+                    
+                    if (isModalFullyVisible && !modal.dataset.startScroll) {
+                        modal.dataset.startScroll = scrolled;
+                    }
+                    
+                    if (modal.dataset.startScroll) {
+                        const startScroll = parseFloat(modal.dataset.startScroll);
+                        const scrollDifference = scrolled - startScroll;
+                        const modalMove = Math.max(0, Math.min(250, scrollDifference * 0.8));
+                        modal.style.transform = `translateY(${modalMove}px)`;
+                    }
+                }
+            }
+        });
+    </script>
+    
+    <footer>
+        <p class="instagram-disclaimer">* - Instagram (принадлежит компании Meta, признанной экстремистской и запрещенной на территории РФ)</p>
+    </footer>
+</body>
+</html>
